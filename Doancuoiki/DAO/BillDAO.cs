@@ -45,7 +45,7 @@ namespace Doancuoiki.DAO
         public void CheckExport(int id)
         {
             string query = "Update dbo.bill SET dateChenkOut = Getdate(), st = 1, tinhTrang =  N'Đang vận chuyển' where id = " + id;
-            //DataProvider.Instance.ExecuteNonQuery(query);
+            DataProvider.Instance.ExecuteNonQuery(query);
         }
 
     }
